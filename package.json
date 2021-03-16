@@ -1,0 +1,39 @@
+{
+    "name": "typedapi-analytics-logger",
+    "version": "0.0.1",
+    "description": "TypedAPI logger for TypedAPI analytics project",
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
+    "keywords": [
+        "typescript",
+        "typedapi",
+        "api",
+        "server",
+        "client",
+        "log"
+    ],    
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepublishOnly": "rm -rf build/ && tsc"
+    },
+    "author": {
+        "name": "Sergey Sachik",
+        "email": "serega3000@gmail.com"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "typedapi-core": "^0.3.1",
+        "typedapi-server": "^0.3.1"
+    },
+    "dependencies": {
+        "@types/node": "^14.14.34"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/typedapi/analytics-logger.git"
+    },
+    "peerDependencies": {
+        "typedapi-core": "^0.3.1",
+        "typedapi-server": "^0.3.1"
+    }    
+}
