@@ -77,7 +77,7 @@ export class AnalyticsLogger implements LoggerInterface {
         })
     }
 
-    send(data: unknown) {
+    send(data: unknown) {        
         const body = this.jsonEncoder.stringify(data)
         const request = http.request({
             host: this.host,
@@ -98,6 +98,7 @@ export class AnalyticsLogger implements LoggerInterface {
                 console.error(err)
             })
         })
+        request.on("error", err => console.error(err))
         request.end(body)
     }
 
